@@ -1,0 +1,30 @@
+@model IEnumerable<Course>
+
+@{
+    ViewData["Title"] = "Kurs Listesi";
+}
+
+<h2>Kurs Listesi</h2>
+<a asp-controller="Course" asp-action="Create" class="btn btn-success">Yeni Kurs Ekle</a>
+<hr>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th style="width: 150px;">@Html.DisplayNameFor(m => m.CourseId)</th>
+            <th>@Html.DisplayNameFor(m => m.Name)</th>
+            <th style="width: 150px;">İşlemler</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var course in Model) {
+            <tr>
+                <td>@Html.DisplayFor(item => course.CourseId)</td>
+                <td>@Html.DisplayFor(item => course.Name)</td>
+                <td>
+                    <a asp-controller="Course" asp-action="Edit" asp-route-id="@course.CourseId" class="btn btn-primary">Düzenle</a>
+                    <a asp-controller="Course" asp-action="Delete" asp-route-id="@course.CourseId" class="btn btn-danger">Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,15 @@
+@model Course
+
+@{
+    ViewData["Title"] = "Kurs Bilgi Düzenle";
+}
+
+<form asp-controller="Course" asp-action="Edit" method="post">
+    <input type="hidden" asp-for="CourseId">
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label">Ad</label>
+        <input asp-for="Name" class="form-control">
+    </div>
+
+    <button type="submit" class="btn btn-success">Güncelle</button>
+</form>
