@@ -1,0 +1,15 @@
+@model Student
+
+@{
+    ViewData["Title"] = "Öğrenci Kayıt Sil";
+}
+
+<p>
+    <b>@Model.Firstname @Model.Lastname</b> isimli öğrenciyi silmek istiyor musunuz?
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" name="id" value="@Model.StudentId">
+        <button type="submit" class="btn btn-success">Evet</button>
+        <a asp-action="Index" class="btn btn-danger">Hayır</a>
+    </form>
+</p>
