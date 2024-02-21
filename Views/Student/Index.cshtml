@@ -23,8 +23,8 @@
                 <td>@Html.DisplayFor(item => student.Firstname)</td>
                 <td>@Html.DisplayFor(item => student.Lastname)</td>
                 <td>
-                    <a asp-controller="Student" asp-action="Details" asp-route-id="" class="btn btn-primary">Detaylar</a>
-                    <a asp-controller="Student" asp-action="Delete" asp-route-id="" class="btn btn-danger">Sil</a>
+                    <a asp-controller="Student" asp-action="Edit" asp-route-id="@student.StudentId" class="btn btn-primary">Düzenle</a>
+                    <a asp-controller="Student" asp-action="Delete" asp-route-id="@student.StudentId" class="btn btn-danger">Sil</a>
                 </td>
             </tr>
         }

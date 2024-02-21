@@ -1,0 +1,27 @@
+@model Student
+
+@{
+    ViewData["Title"] = "Öğrenci Bilgi Düzenle";
+}
+
+<form asp-controller="Student" asp-action="Edit" method="post">
+    <input type="hidden" asp-for="StudentId">
+    <div class="mb-3">
+        <label asp-for="Firstname" class="form-label">Ad</label>
+        <input asp-for="Firstname" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Lastname" class="form-label">Soyad</label>
+        <input asp-for="Lastname" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label">E-posta</label>
+        <input asp-for="Email" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="PhoneNumber" class="form-label">Telefon</label>
+        <input asp-for="PhoneNumber" class="form-control">
+    </div>
+
+    <button type="submit" class="btn btn-success">Güncelle</button>
+</form>
