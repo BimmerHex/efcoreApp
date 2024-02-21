@@ -1,7 +1,7 @@
 @model Student
 
 @{
-    ViewData["Title"] = "Öğrenci Oluştur";
+    ViewData["Title"] = "Yeni Öğrenci Ekle";
 }
 
 <form asp-controller="Student" asp-action="Create" method="post">
@@ -22,5 +22,5 @@
         <input asp-for="PhoneNumber" class="form-control">
     </div>
 
-    <button type="submit" class="btn btn-primary">Kaydet</button>
+    <button type="submit" class="btn btn-success">Kaydet</button>
 </form>
