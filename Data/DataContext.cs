@@ -1,0 +1,11 @@
+using Microsoft.EntityFrameworkCore;
+
+namespace efcoreApp.Data
+{
+    public class DataContext : DbContext
+    {
+        public DbSet<Course> Courses { get; set; }
+        public DbSet<Student> Students { get; set; }
+        public DbSet<CourseRegister> CourseRegisters { get; set; }
+    }
+}
